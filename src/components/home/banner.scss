@@ -1,0 +1,40 @@
+.banner {
+  position: relative;
+  padding: .5rem;
+  margin: 0 3rem;
+  text-align: center;
+  height: 223px;
+  border-radius: 25px;
+  color: #fff;
+  overflow: hidden;
+
+  background-image: url(../../assets/Image_source_1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center; // Center vertically
+
+  &__filter {
+    position: absolute;
+    z-index: 4;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.3;
+  }
+
+  &__title {
+    position: relative;
+    z-index: 5;
+    height: 100%; // Adjust the height as needed
+  }
+
+  // add media query
+  @media (max-width: 768px) {
+    margin: 0 1rem;
+  }
+}
