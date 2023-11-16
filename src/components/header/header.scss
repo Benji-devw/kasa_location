@@ -1,12 +1,12 @@
 @import '../../styles/variables.scss';
 
 .header {
-  // min-height: 60px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  // padding: ;
+  font-weight: bold;
+  padding: 0 7%;
 
   img {
     max-height: 60px;
@@ -40,4 +40,9 @@
       }
     }
   }
+
+  @media (max-width: 768px) {
+    padding: 0 0%;
+  }
+
 }

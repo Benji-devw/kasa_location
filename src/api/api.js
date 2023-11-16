@@ -1,5 +1,5 @@
 
-const FetchData = async () => {
+const FetchData = async (id) => {
     try {
       const response = await fetch('./logements.json', {
         headers: {
@@ -8,7 +8,14 @@ const FetchData = async () => {
           },
           });
       const data = await response.json();
-      return data;
+
+      if (id !== undefined) {
+        const article = data.find((item) => item.id === id);
+        return article;
+      } else {
+        return data;
+      }
+
     } catch (error) {
       console.error(error);
     }

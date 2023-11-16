@@ -9,8 +9,8 @@ const Gallery = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const result = await FetchData();
-        setData(result);
+        const response = await FetchData();
+        setData(response);
       } catch (error) {
         console.error('Erreur lors de la récupération des données dans le composant Gallery :', error);
       }
