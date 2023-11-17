@@ -1,14 +1,14 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-function Card({props}) {
+function Card({id ,title, cover}) {
 
   return (
-    <Link to={`/${props.id}`} className='card-link'>
+    <Link to={`/article/${id}`} className='card-link'>
     <div className="card">
-      <img src={props.cover} alt={props.title} />
+      <img src={cover} alt={title} />
       <div className="card-body">
-        <h3 className='card__title'>{props.title}</h3>
+        <h3 className='card__title'>{title}</h3>
       </div>
     </div>
     </Link>

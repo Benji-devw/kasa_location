@@ -1,15 +1,18 @@
 import '../styles/Home.scss';
 import React from "react";
+import Img from "../assets/Image_source_1.png";
 import Layout from "../components/Layout";
 import Banner from "../components/home/banner";
 import Gallery from "../components/home/gallery";
 
-const Home = (props) => {
+const Home = () => {
   return (
     <Layout>
       <div className="home">
-        <Banner title={"Chez vous, partout et ailleurs"} />
-        <Gallery props={props}/>
+        <Banner image={Img}>
+          <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
+        </Banner>
+        <Gallery />
       </div>
     </Layout>
   );

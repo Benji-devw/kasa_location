@@ -1,29 +1,38 @@
-import './gallery.scss';
-import FetchData from '../../api/api';
-import { useEffect, useState } from 'react';
-import Card from './card';
+import "./gallery.scss";
+import FetchData from "../../api/api";
+import { useEffect, useState } from "react";
+import Card from "./card";
 
 const Gallery = () => {
-  const [data, setData] = useState([]);
+  const [housings, setHousings] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
       try {
         const response = await FetchData();
-        setData(response);
+        setHousings(response);
       } catch (error) {
-        console.error('Erreur lors de la récupération des données dans le composant Gallery :', error);
+        alert("Erreur lors de la récupération des données");
+        console.error(
+          "Erreur lors de la récupération des données",
+          error
+        );
       }
     };
     getData();
   }, []);
-  
+
   return (
-    <div className='gallery'>
+    <div className="gallery">
       <div className="gallery__container">
         <div className="gallery__container__item">
-          {data.map((item) => (
-            <Card key={item.id} props={item} />
+          {housings.map((item) => (
+            <Card
+              key={item.id}
+              id={item.id}
+              title={item.title}
+              cover={item.cover}
+            />
           ))}
         </div>
       </div>

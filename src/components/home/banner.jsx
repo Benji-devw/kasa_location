@@ -1,11 +1,12 @@
 import "./banner.scss";
 
-const Banner = ({title}) => {
+const Banner = ({image, children}) => {
   return (
     <div className="banner">
+      {/* <img src={image} alt="banner" /> */}
       <div className="banner__content">
         <div className="banner__filter"></div>
-        <h1 className="banner__title">{title}</h1>
+        {children}
       </div>
     </div>
   );
