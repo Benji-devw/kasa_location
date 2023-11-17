@@ -1,10 +1,9 @@
 main {
+  height: 100%;
   padding: .7rem;
-  min-height: 100vh;
-  // display: flex;
-  // flex-direction: row;
-  // align-items: center;
-  // justify-content: space-around;
+  padding: 0 7%;
 
-  // font-size: calc(10px + 2vmin);
+  @media (max-width: 768px) {
+    padding: 0 0%;
+  }
 }
