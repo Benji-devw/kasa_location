@@ -10,14 +10,15 @@ import NotFound from './pages/404';
 // fixe route /article/slug
 const App = () => {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/article/:id" element={<Article />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Router>
+  <Router>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/:id" element={<Article />} />
+      {/* <Route path="/404" element={<NotFound />} /> */}
+      <Route path="*" element={<NotFound to="/404" />} />
+    </Routes>
+  </Router>
   );
 };
 

@@ -4,12 +4,12 @@ import Layout from "../components/Layout";
 import Banner from "../components/home/banner";
 import Gallery from "../components/home/gallery";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <Layout>
       <div className="home">
         <Banner title={"Chez vous, partout et ailleurs"} />
-        <Gallery />
+        <Gallery props={props}/>
       </div>
     </Layout>
   );

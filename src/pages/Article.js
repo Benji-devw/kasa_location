@@ -1,3 +1,4 @@
+import '../styles/article.scss';
 import React, { useEffect, useState } from 'react';
 import FetchData from '../api/api';
 import { useParams } from 'react-router-dom';
@@ -22,14 +23,16 @@ const Article = () => {
 
   return (
     <Layout>
+      <section>
       {!data ? (
         <div>Loading...</div>
       ) : (
-        <article>
+        <div className='article'>
           <h1>{data.title}</h1>
           <p>{data.location}</p>
-        </article>
+        </div>
       )}
+      </section>
     </Layout>
   );
 };

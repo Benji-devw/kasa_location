@@ -15,7 +15,6 @@ const FetchData = async (id) => {
       } else {
         return data;
       }
-
     } catch (error) {
       console.error(error);
     }
