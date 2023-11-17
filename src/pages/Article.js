@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import FetchData from '../api/api';
 import { useParams } from 'react-router-dom';
 import Layout from '../components/Layout';
+import Carrousels from '../components/article/carrousel';
 
 const Article = () => {
   const { id } = useParams();
@@ -27,10 +28,12 @@ const Article = () => {
       {!data ? (
         <div>Loading...</div>
       ) : (
-        <div className='article'>
+        <article>
+          <Carrousels props={data} />
+          
           <h1>{data.title}</h1>
           <p>{data.location}</p>
-        </div>
+        </article>
       )}
       </section>
     </Layout>

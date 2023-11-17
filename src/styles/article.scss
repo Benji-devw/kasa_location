@@ -1,8 +1,53 @@
 @import './variables';
 
 article {
+  color: $main-color;
 
-  .article {
-    color: $main-color;
+  .article__carrousel {
+    position: relative;
+    width: 100%;
+    height: 415px;
+    border-radius: 25px;
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      opacity: 0;
+      transition: all 0.2s ease-in-out;
+
+    }
+    .visible {
+      opacity: 1;
+    }
+
+    &__arrow {
+      position: absolute;
+      z-index: 4;
+      font-size: 4rem;
+      color: #fff;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+    .prev {
+      left: 1rem;
+    }
+
+    .next {
+      right: 1rem;
+    }
   }
 }
