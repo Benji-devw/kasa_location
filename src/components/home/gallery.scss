@@ -4,6 +4,7 @@
   background-color: $grey;
   min-height: 80vh;
   border-radius: 25px;
+  padding: 3rem;
 
   &__container__item {
     display: grid;
@@ -19,6 +20,7 @@
     border-radius: 10px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
+
     &:after {
       content: "";
       position: absolute;
