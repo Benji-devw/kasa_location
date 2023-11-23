@@ -5,6 +5,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import Layout from '../components/Layout';
 import Carrousels from '../components/article/carrousel';
 import Rating from '../components/article/rating';
+import Tags from '../components/article/tags';
 
 const Article = () => {
   const { id } = useParams();
@@ -28,7 +29,7 @@ const Article = () => {
     };
 
     fetchDataById();
-  }, [id]);
+  }, [id, navigate]);
 
   return (
     <Layout>
@@ -46,13 +47,20 @@ const Article = () => {
               {/* <span>{data.tags}</span> */}
             </div>
             <div className="article__content__author">
-              <p>{housing.host.name}</p>
-              <img src={housing.host.picture} alt={housing.host.name} />
-              <div className="article__content__rating">
+              <div className="article__content__author__avatar">
+                <p>{housing.host.name}</p>
+                <img src={housing.host.picture} alt={housing.host.name} />
+              </div>
+              <div className="article__content__author__rating">
                 <Rating rating={housing.rating} />
               </div>
             </div>
           </div>
+
+          <div className="article__tags">
+            <Tags tags={housing.tags} />
+          </div>
+
         </article>
       )}
       </section>

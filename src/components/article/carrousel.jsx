@@ -18,6 +18,7 @@ const Carrousels = ({ title, pictures }) => {
       <span className="article__carrousel__arrow prev" onClick={prevImage}>
         &#10094;
       </span>
+      //TODO: Check map
       {/* {pictures.map((picture, index) => ( */}
         <img
           // key={index}
