@@ -13,10 +13,7 @@ const Gallery = () => {
         setHousings(response);
       } catch (error) {
         alert("Erreur lors de la récupération des données");
-        console.error(
-          "Erreur lors de la récupération des données",
-          error
-        );
+        console.error("Erreur lors de la récupération des données", error);
       }
     };
     getData();

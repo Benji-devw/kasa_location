@@ -3,14 +3,23 @@ import { useState } from "react";
 
 const Carrousels = ({ title, pictures }) => {
   const [currentImage, setCurrentImage] = useState(0);
+  const [index, setIndex] = useState(0);
 
   const nextImage = () => {
-    setCurrentImage(() => (currentImage + 1) % pictures.length);
+    setIndex(() => (currentImage + 1) % pictures.length);
+    setTimeout(() => {
+      setCurrentImage(() => (currentImage + 1) % pictures.length);
+    }, 300);
   };
   const prevImage = () => {
-    setCurrentImage(() =>
+    setIndex(() =>
       currentImage === 0 ? pictures.length - 1 : currentImage - 1
     );
+    setTimeout(() => {
+      setCurrentImage(() =>
+        currentImage === 0 ? pictures.length - 1 : currentImage - 1
+      );
+    }, 300);
   };
 
   return (
@@ -18,15 +27,11 @@ const Carrousels = ({ title, pictures }) => {
       <span className="article__carrousel__arrow prev" onClick={prevImage}>
         &#10094;
       </span>
-      //TODO: Check map
-      {/* {pictures.map((picture, index) => ( */}
-        <img
-          // key={index}
-          src={pictures[currentImage]}
-          alt={pictures.title}
-          // className={index === currentImage ? "visible" : "hidden"}
-        />
-      {/* ))} */}
+      <img
+        className={index === currentImage ? "visible" : "hidden"}
+        src={pictures[currentImage]}
+        alt={title}
+      />
       <span className="article__carrousel__arrow next" onClick={nextImage}>
         &#10095;
       </span>

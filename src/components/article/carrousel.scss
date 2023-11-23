@@ -1,3 +1,5 @@
+@import '../../styles/variables.scss';
+
 .article__carrousel {
   position: relative;
   width: 100%;
@@ -18,13 +20,15 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 3;
-    // opacity: 0;
-    transition: all 0.3s ease-in-out;
+    transition: 0.3s ease-out;
   }
   img.visible {
-    opacity: 1;
-    width: 110%;
-    height: 110%;
+    width: 105%;
+    height: 105%;
+  }
+  img.hidden {
+    width: 100%;
+    height: 100%;
   }
 
   &__arrow {
@@ -36,7 +40,7 @@
     transition: all 0.2s ease-in-out;
 
     &:hover {
-      background-color: rgba(0, 0, 0, 0.8);
+      color: $main-color;
     }
   }
   .prev {

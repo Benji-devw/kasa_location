@@ -7,10 +7,14 @@ body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 1.2rem;
+  // font-size: 1.1rem;
   color: $main-color;
 }
-
+p {
+  font-size: medium;
+  margin: 0;
+  padding: 0;
+}
 a {
   text-decoration: none;
   color: $main-color;
@@ -26,9 +30,24 @@ code {
     monospace;
 }
 
+h4 {
+  font-weight: 200;
+  margin: .5rem;
+  border-radius: 5px;
+}
+
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  width: 100%;
+}
+
 .container {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+

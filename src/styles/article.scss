@@ -65,5 +65,44 @@ article {
       }
     }
   }
+
+  .article__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: 1rem 0;
+
+    &__topBar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+      background-color: $main-color;
+      cursor: pointer;
+      border-radius: 5px;
+      
+      & img { 
+        width: 20px;
+        margin-right: 1rem;
+      }
+    }
+
+    &__content {
+      background-color: $main-grey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      transition: 1.3s ease-in-out;
+      height: 0%;
+      
+    }
+    &__item {
+      padding: $main-padding;
+    }
+    .open {
+      height: 100%;
+    }
+  }
   
 }
