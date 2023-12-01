@@ -11,6 +11,16 @@
 
   overflow: hidden;
 
+  &__counter {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    color: #fff;
+    font-size: 1.3rem;
+  }
+
   & img {
     width: 100%;
     height: 100%;
@@ -51,8 +61,13 @@
   }
 
   @media screen and (max-width: 768px) {
-    &__arrow {
-      font-size: 3rem;
+    .article__carrousel {
+      &__counter {
+        display: none;
+      }
+      &__arrow {
+        font-size: 3rem;
+      }
     }
   }
 }

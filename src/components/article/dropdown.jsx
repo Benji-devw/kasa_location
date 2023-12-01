@@ -21,8 +21,8 @@ const Dropdown = ({ title, datas }) => {
         />
       </div>
       {open && (
-        <div className={`dropdown__content ${open ? "open" : null}`}>
-          <div className={`dropdown__item`}>
+        <div className={`dropdown__content `}>
+          <div className={`dropdown__item ${open ? "open" : "close"}`}>
             {Array.isArray(datas) ? (
               datas.map((data, index) => <p key={index}>{data}</p>)
             ) : (
@@ -30,7 +30,7 @@ const Dropdown = ({ title, datas }) => {
             )}
           </div>
         </div>
-      )}
+     )}
     </div>
   );
 };

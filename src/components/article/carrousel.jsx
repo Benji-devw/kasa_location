@@ -33,6 +33,7 @@ const Carrousels = ({ title, pictures }) => {
         src={pictures[currentImage]}
         alt={title}
       />
+      <span className="article__carrousel__counter">{index+1}/{pictures.length}</span>
       <span className="article__carrousel__arrow next" onClick={nextImage}>
         &#10095;
       </span>
