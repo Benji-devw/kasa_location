@@ -1,5 +1,5 @@
 import "./gallery.scss";
-import FetchData from "../../api/api";
+import { fetchLogements } from "../../api/api";
 import { useEffect, useState } from "react";
 import Card from "./card";
 
@@ -9,7 +9,7 @@ const Gallery = () => {
   useEffect(() => {
     const getData = async () => {
       try {
-        const response = await FetchData();
+        const response = await fetchLogements();
         setHousings(response);
       } catch (error) {
         alert("Erreur lors de la récupération des données");

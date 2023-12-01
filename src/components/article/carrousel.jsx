@@ -1,6 +1,7 @@
 import "./carrousel.scss";
 import { useState } from "react";
 
+//TODO: Add a counter
 const Carrousels = ({ title, pictures }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [index, setIndex] = useState(0);

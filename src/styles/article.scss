@@ -1,24 +1,23 @@
-@import './variables';
+@import "./variables";
 
-article {
-  padding: $main-padding;
-
+.logement {
+  display: flex;
+  flex-direction: column;
+  
   .article__content {
-    color: $main-color;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    // margin-bottom: 1rem;
 
     &__title {
       text-align: left;
+      margin-right: 1rem ;
     }
     &__author {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      text-align: center;
-      
+      // align-items: center;
+      // text-align: center;
+
       &__avatar {
         display: flex;
         align-items: center;
@@ -33,32 +32,49 @@ article {
           margin: 1rem;
         }
       }
-      
+
       &__rating {
         display: flex;
         align-items: center;
         justify-content: space-around;
         & i {
-          margin: 0 .4rem;
+          margin: 0 0.4rem;
         }
         & .fa-none {
           color: $grey;
         }
       }
     }
-    
+  }
+  @media screen and (max-width: 768px) {
+    .article__content {
+      flex-direction: column;
+
+      &__author {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
   }
 
   .article__tags {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 1rem 0;
+    // display: flex;
+    // flex-wrap: wrap;
+    // flex-direction: row;
+    // padding: 1rem 0;
 
     &__items {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+
       .tag__item {
-        margin: 0 .4rem;
-        padding: .2rem .5rem;
+        display: block;
+        height: 18px;
+        padding: 0.2rem 0.5rem;
         border-radius: 25px;
         background-color: $main-color;
         color: #fff;
@@ -66,43 +82,25 @@ article {
     }
   }
 
-  .article__details {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 1rem;
-    margin: 1rem 0;
+  .dropdowns {
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
 
-    &__topBar {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      color: #fff;
-      background-color: $main-color;
-      cursor: pointer;
-      border-radius: 5px;
-      
-      & img { 
-        width: 20px;
-        margin-right: 1rem;
-      }
-    }
-
-    &__content {
-      background-color: $main-grey;
-      border-radius: 5px;
-      display: flex;
-      flex-direction: column;
-      overflow: hidden;
-      transition: 1.3s ease-in-out;
-      height: 0%;
-      
-    }
-    &__item {
-      padding: $main-padding;
-    }
-    .open {
-      height: 100%;
+    & .dropdown {
+      margin: 2rem 0;
+      width: 100%; // Ajoutez cette ligne pour définir la largeur à 100%
     }
   }
-  
+
+  @media screen and (max-width: 768px) {
+    .dropdowns {
+      gap: 0;
+      flex-direction: column;
+
+      & .dropdown {
+        margin: 1rem 0;
+      }
+    }
+  }
 }

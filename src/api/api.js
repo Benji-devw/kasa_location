@@ -1,17 +1,29 @@
-const FetchData = async (id) => {
+const fetchLogements = async (id) => {
   const response = await fetch("http://localhost:3000/logements.json", {
     headers: {
       "Content-Type": "application/json",
       Accept: "application/json",
     },
   });
-  const data = await response.json();
+  const { logements } = await response.json();
 
   if (id !== undefined) {
-    const article = data.find((item) => item.id === id);
+    const article = logements.find((item) => item.id === id);
     return article;
   } else {
-    return data;
+    return logements;
   }
 };
-export default FetchData;
+
+//TODO: add fetchAbouts
+const fetchAbouts = async (id) => {
+  const response = await fetch("http://localhost:3000/logements.json", {
+    headers: {
+      "Content-Type": "application/json",
+      Accept: "application/json",
+    },
+  });
+  const { about } = await response.json();
+  return about;
+};
+export { fetchLogements, fetchAbouts };

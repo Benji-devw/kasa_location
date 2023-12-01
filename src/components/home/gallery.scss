@@ -1,11 +1,10 @@
-@import '../../styles/variables.scss';
+@import "../../styles/variables.scss";
 
 .gallery {
   background-color: $main-grey;
   min-height: 80vh;
   border-radius: 25px;
   padding: 1.7rem;
-
 
   &__container__item {
     display: grid;
@@ -53,7 +52,6 @@
       // font-weight: 700;
       margin: 0;
       color: #fff;
-
     }
   }
 
@@ -69,8 +67,7 @@
     }
   }
 
-
   @media (max-width: 768px) {
-    padding: .7rem;
+    padding: 0.7rem;
   }
 }

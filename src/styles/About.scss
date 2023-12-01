@@ -1,0 +1,22 @@
+.about {
+  display: flex;
+  flex-direction: column;
+
+  .dropdowns {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem 4rem;
+
+    .dropdown {
+      // margin: 2rem 0;
+      width: 100%; // Ajoutez cette ligne pour définir la largeur à 100%
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .dropdowns {
+      margin: 2rem 0;
+    }
+  }
+}

@@ -1,15 +1,50 @@
-import '../styles/About.scss';
+import "../styles/About.scss";
 import Layout from "../components/Layout";
-
+import Banner from "../components/home/banner";
+import Img from "../assets/kalen.png";
+import { fetchAbouts } from "../api/api";
+import Dropdown from "../components/article/dropdown";
+import { useEffect, useState } from "react";
 
 const About = () => {
+  const [abouts, setAbouts] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchAbouts();
+        setAbouts(data);
+      } catch (error) {
+        alert("Erreur lors de la récupération des données de l'article");
+        console.error(
+          "Erreur lors de la récupération des données de l'article:",
+          error
+        );
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Layout>
-      <div className="about">
-        <h1>About Page</h1>
-        <p>My name is John Doe and I am a web developer</p>
-      </div>
+      <section>
+        <article className="about">
+          <Banner image={Img}>
+            {/* <h1 className="banner__title">Chez vous, partout et ailleurs</h1> */}
+          </Banner>
+          <div className="dropdowns">
+            {abouts.map((about, id) => (
+              <Dropdown
+                key={id}
+                title={about.title}
+                datas={about.description}
+              />
+            ))}
+          </div>
+        </article>
+      </section>
     </Layout>
-  )
-}
+  );
+};
 export default About;

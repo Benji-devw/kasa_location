@@ -1,0 +1,33 @@
+@import "./variables";
+
+.dropdown__topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #fff;
+  background-color: $main-color;
+  cursor: pointer;
+  border-radius: 5px;
+  height: 52px;
+
+  & img {
+    width: 20px;
+    margin-right: 1rem;
+  }
+}
+
+.dropdown__content {
+  background-color: $main-grey;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: 1.3s ease-in-out;
+  height: 0%;
+}
+.dropdown__item {
+  padding: $main-padding;
+}
+.open {
+  height: 100%;
+}

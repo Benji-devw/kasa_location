@@ -1,3 +1,4 @@
+import "../../styles/Dropdown.scss";
 import React, { useState } from "react";
 
 const Dropdown = ({ title, datas }) => {
@@ -5,9 +6,9 @@ const Dropdown = ({ title, datas }) => {
   const toggle = () => setOpen(!open);
 
   return (
-    <>
+    <div className="dropdown">
       <div
-        className="article__details__topBar"
+        className="dropdown__topBar"
         tabIndex={0}
         role="button"
         onClick={toggle}
@@ -19,19 +20,18 @@ const Dropdown = ({ title, datas }) => {
           style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </div>
-      {open && 
-      <div className={`article__details__content ${open ? "open" : null}`}>
-        <div className={`article__details__item`}>
-          {Array.isArray(datas) ? 
-            datas.map((data, index) => ( <p key={index}>{data}</p> ))
-          : 
-            <p>{datas}</p>
-          }
-            </div>
-      </div>
-    }
-      
-    </>
+      {open && (
+        <div className={`dropdown__content ${open ? "open" : null}`}>
+          <div className={`dropdown__item`}>
+            {Array.isArray(datas) ? (
+              datas.map((data, index) => <p key={index}>{data}</p>)
+            ) : (
+              <p>{datas}</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
   );
 };
 
