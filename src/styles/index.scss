@@ -49,13 +49,13 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  // justify-content: space-between;
 }
 
 section {
   padding: $main-padding;
 }
 
-.is-active {
+.active {
   text-decoration: underline;
 }

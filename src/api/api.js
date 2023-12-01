@@ -15,8 +15,8 @@ const fetchLogements = async (id) => {
   }
 };
 
-//TODO: add fetchAbouts
-const fetchAbouts = async (id) => {
+
+const fetchAbouts = async () => {
   const response = await fetch("http://localhost:3000/logements.json", {
     headers: {
       "Content-Type": "application/json",

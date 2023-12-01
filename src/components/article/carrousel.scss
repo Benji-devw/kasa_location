@@ -60,14 +60,17 @@
     right: 1rem;
   }
 
-  @media screen and (max-width: 768px) {
-    .article__carrousel {
-      &__counter {
-        display: none;
-      }
-      &__arrow {
-        font-size: 3rem;
-      }
+}
+
+@media screen and (max-width: 768px) {
+  .article__carrousel {
+    height: 330px;
+    
+    &__counter {
+      display: none;
+    }
+    &__arrow {
+      font-size: 3rem;
     }
   }
 }

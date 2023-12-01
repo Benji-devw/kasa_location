@@ -20,6 +20,8 @@ const Dropdown = ({ title, datas }) => {
           style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
         />
       </div>
+
+      {/* //FIXME: add animation to open */}
       {open && (
         <div className={`dropdown__content `}>
           <div className={`dropdown__item ${open ? "open" : "close"}`}>

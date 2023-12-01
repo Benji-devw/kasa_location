@@ -1,4 +1,4 @@
-import "./banner.scss";
+import "../../styles/banner.scss";
 
 const Banner = ({image, children}) => {
   return (

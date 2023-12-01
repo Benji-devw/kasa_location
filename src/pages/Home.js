@@ -8,11 +8,13 @@ import Gallery from "../components/home/gallery";
 const Home = () => {
   return (
     <Layout>
-      <section className="home">
+      <section>
+        <article className="home">
         <Banner image={Img}>
           <h1 className="banner__title">Chez vous, partout et ailleurs</h1>
         </Banner>
         <Gallery />
+        </article>
       </section>
     </Layout>
   );

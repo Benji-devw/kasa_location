@@ -1,4 +1,4 @@
-import "./gallery.scss";
+import "../../styles/gallery.scss";
 import { fetchLogements } from "../../api/api";
 import { useEffect, useState } from "react";
 import Card from "./card";

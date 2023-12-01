@@ -1,13 +1,21 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-const MenuLink = ({props}) => {
+const MenuLink = ({ props }) => {
   return (
     <ul>
       {props.map((path, index) => (
-        <li key={index}><Link to={path.url}>{path.link}</Link></li>
+        <NavLink
+          key={index}
+          to={path.url}
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "active" : ""
+          }
+        >
+          {path.link}
+        </NavLink>
       ))}
     </ul>
   );
-}
+};
 
 export default MenuLink;
