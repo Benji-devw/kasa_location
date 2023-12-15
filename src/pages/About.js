@@ -30,10 +30,8 @@ const About = () => {
     <Layout>
       <section>
         <article className="about">
-          <Banner image={Img}>
-            {/* <h1 className="banner__title">Chez vous, partout et ailleurs</h1> */}
-          </Banner>
-          <div className="dropdowns">
+          <Banner image={Img}></Banner>
+          {/* <div className="dropdowns"> */}
             {abouts.map((about, id) => (
               <Dropdown
                 key={id}
@@ -41,7 +39,7 @@ const About = () => {
                 datas={about.description}
               />
             ))}
-          </div>
+          {/* </div> */}
         </article>
       </section>
     </Layout>

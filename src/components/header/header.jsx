@@ -1,7 +1,7 @@
 import "./header.scss";
 import MenuList from "./menuList";
 import logo from "../../assets/Logo_kasa.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const Header = () => {
   const list = [

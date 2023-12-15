@@ -1,4 +1,4 @@
-import "./carrousel.scss";
+import "../../styles/carrousel.scss";
 import { useState } from "react";
 
 //TODO: Add a counter

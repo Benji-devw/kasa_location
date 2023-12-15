@@ -21,10 +21,9 @@ const Dropdown = ({ title, datas }) => {
         />
       </div>
 
-      {/* //FIXME: add animation to open */}
-      {open && (
-        <div className={`dropdown__content `}>
-          <div className={`dropdown__item ${open ? "open" : "close"}`}>
+      {/* {open && ( */}
+        <div className={`dropdown__content ${open ? "open" : "close"}`}>
+          <div className={`dropdown__item`}>
             {Array.isArray(datas) ? (
               datas.map((data, index) => <p key={index}>{data}</p>)
             ) : (
@@ -32,7 +31,7 @@ const Dropdown = ({ title, datas }) => {
             )}
           </div>
         </div>
-     )}
+      {/* )} */}
     </div>
   );
 };
