@@ -12,6 +12,9 @@ const Dropdown = ({ title, datas }) => {
         tabIndex={0}
         role="button"
         onClick={toggle}
+        onKeyDown={(event) => {
+          event.key === "Enter" && toggle();
+        }}
       >
         <h4>{title}</h4>
         <img

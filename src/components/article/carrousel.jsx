@@ -1,7 +1,6 @@
 import "../../styles/carrousel.scss";
 import { useState } from "react";
 
-//TODO: Add a counter
 const Carrousels = ({ title, pictures }) => {
   const [currentImage, setCurrentImage] = useState(0);
   const [index, setIndex] = useState(0);
@@ -25,7 +24,14 @@ const Carrousels = ({ title, pictures }) => {
 
   return (
     <div className="article__carrousel">
-      <span className="article__carrousel__arrow prev" onClick={prevImage}>
+      <span
+        tabIndex={0}
+        className="article__carrousel__arrow prev"
+        onClick={prevImage}
+        onKeyDown={(event) => {
+          event.key === "Enter" && prevImage();
+        }}
+      >
         &#10094;
       </span>
       <img
@@ -33,8 +39,17 @@ const Carrousels = ({ title, pictures }) => {
         src={pictures[currentImage]}
         alt={title}
       />
-      <span className="article__carrousel__counter">{index+1}/{pictures.length}</span>
-      <span className="article__carrousel__arrow next" onClick={nextImage}>
+      <span className="article__carrousel__counter">
+        {index + 1}/{pictures.length}
+      </span>
+      <span
+        tabIndex={0}
+        className="article__carrousel__arrow next"
+        onClick={nextImage}
+        onKeyDown={(event) => {
+          event.key === "Enter" && nextImage();
+        }}
+      >
         &#10095;
       </span>
     </div>

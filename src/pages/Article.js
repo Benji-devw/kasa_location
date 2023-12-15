@@ -35,7 +35,7 @@ const Article = () => {
   }, [id, navigate]);
 
   return (
-    <Layout>
+    <Layout page={"Logement"}>
       <section>
         {!logements ? (
           <div>Loading...</div>

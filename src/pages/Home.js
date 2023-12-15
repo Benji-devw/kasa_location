@@ -7,7 +7,7 @@ import Gallery from "../components/home/gallery";
 
 const Home = () => {
   return (
-    <Layout>
+    <Layout page={"Home"}>
       <section>
         <article className="home">
         <Banner image={Img}>

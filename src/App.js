@@ -6,7 +6,6 @@ import About from "./pages/About";
 import Article from "./pages/Article";
 import NotFound from "./pages/404";
 
-//TODO: check diff Router vs BrowserRouter
 const App = () => {
   return (
     <Router>

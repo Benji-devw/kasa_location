@@ -27,7 +27,7 @@ const About = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout page={'About'}>
       <section>
         <article className="about">
           <Banner image={Img}></Banner>
