@@ -17,21 +17,19 @@ const Dropdown = ({ title, datas }) => {
         <img
           src="/Arrow.png"
           alt="arrow"
-          style={{ transform: open ? "rotate(180deg)" : "rotate(0deg)" }}
+          style={{ transform: open ? "rotate(0deg)" : "rotate(180deg)" }}
         />
       </div>
 
-      {/* {open && ( */}
-        <div className={`dropdown__content ${open ? "open" : "close"}`}>
-          <div className={`dropdown__item`}>
-            {Array.isArray(datas) ? (
-              datas.map((data, index) => <p key={index}>{data}</p>)
-            ) : (
-              <p>{datas}</p>
-            )}
-          </div>
+      <div className={`dropdown__content ${open ? "open" : ""}`}>
+        <div className={`dropdown__item`}>
+          {Array.isArray(datas) ? (
+            datas.map((data, index) => <p key={index}>{data}</p>)
+          ) : (
+            <p>{datas}</p>
+          )}
         </div>
-      {/* )} */}
+      </div>
     </div>
   );
 };

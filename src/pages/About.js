@@ -31,7 +31,7 @@ const About = () => {
       <section>
         <article className="about">
           <Banner image={Img}></Banner>
-          {/* <div className="dropdowns"> */}
+          <div className="dropdowns">
             {abouts.map((about, id) => (
               <Dropdown
                 key={id}
@@ -39,7 +39,7 @@ const About = () => {
                 datas={about.description}
               />
             ))}
-          {/* </div> */}
+          </div>
         </article>
       </section>
     </Layout>

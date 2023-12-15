@@ -1,15 +1,14 @@
 .about {
-  // display: flex;
-  // flex-direction: row;
+  display: flex;
+  flex-direction: column;
 
   .dropdowns {
-    // display: flex;
-    // flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
     margin: 0 4rem;
 
-    & .dropdown {
+    .dropdown {
       margin: 1rem 0;
-      // width: 100%;
     }
   }
 
