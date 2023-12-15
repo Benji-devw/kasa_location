@@ -25,23 +25,14 @@
     flex-direction: column;
     overflow: hidden;
     height: 0px;
-    transition: all 0.5s ease-in-out;
+    transition: all 0.3s ease-in-out;
   }
 
   .dropdown__item {
-    // transition: .5s ease-in-out;
-    // height: 0;
     padding: $main-padding;
   }
 
   .open {
-    // transition: all .5s ease-in-out;
-
     height: 100%;
-    // transform: scaleY(1) !important;
-    // animation: test .5 ease-in-out ;
-    // transition: .5s ease-in-out;
-    // height: calc(100% - 1px);
-    // height: calc(100% - 1px);
   }
 }

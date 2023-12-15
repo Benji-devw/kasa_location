@@ -80,22 +80,17 @@
   .dropdowns {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 1rem;
+    padding: 1rem 0;
 
     & .dropdown {
-      margin: 2rem 0;
       width: 100%;
     }
   }
 
   @media screen and (max-width: 768px) {
     .dropdowns {
-      gap: 0;
-      flex-direction: column;
-
-      & .dropdown {
-        margin: 1rem 0;
-      }
+      flex-wrap: wrap;
     }
   }
 }
