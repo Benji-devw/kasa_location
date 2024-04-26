@@ -30,6 +30,8 @@
       a {
         display: inline-block;
         min-width: 150px;
+        color: $main-dark;
+        font-weight: 400;
       }
       @media (max-width: 768px) {
         a {

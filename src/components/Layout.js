@@ -5,7 +5,7 @@ import Footer from "./footer/footer";
 //TODO: add head
 const Layout = ({ children, page }) => {
   return (
-    <div className="container">
+    <React.Fragment>
       <head>
         <title>Kasa - {page}</title>
         <meta
@@ -13,10 +13,12 @@ const Layout = ({ children, page }) => {
           content="Kasa est dans le métier de la location d’appartements entre particuliers depuis près de 10 ans maintenant"
         />
       </head>
-      <Header />
-      <main>{children}</main>
-      <Footer />
-    </div>
+      <div className="container">
+        <Header />
+        <main>{children}</main>
+        <Footer />
+      </div>
+    </React.Fragment>
   );
 };
 export default Layout;

@@ -11,6 +11,9 @@ body {
   // font-size: 1.1rem;
   color: $main-color;
 }
+// main {
+//   min-height: 100vh;
+// }
 p {
   font-size: medium;
   margin: 0;
@@ -49,7 +52,7 @@ button {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  // justify-content: space-between;
+  justify-content: space-between;
 }
 
 section {

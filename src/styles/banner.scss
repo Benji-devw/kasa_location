@@ -12,7 +12,7 @@
   background-size: cover;
   display: flex;
   justify-content: center;
-  align-items: center; // Center vertically
+  align-items: center;
 
   &__filter {
     position: absolute;
@@ -22,13 +22,13 @@
     left: 0;
     right: 0;
     background-color: #000;
-    opacity: 0.3;
+    opacity: 0.6;
   }
 
   &__title {
     position: relative;
     z-index: 5;
-    height: 100%; // Adjust the height as needed
+    height: 100%;
   }
 }
 
