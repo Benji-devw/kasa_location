@@ -1,5 +1,4 @@
 @import "./variables";
-
 @import "./App.scss";
 
 body {
@@ -8,12 +7,23 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  // font-size: 1.1rem;
   color: $main-color;
 }
-// main {
-//   min-height: 100vh;
-// }
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+footer {
+  margin-top: auto;
+
+}
+
+section {
+  min-height: 100%;
+  padding: $main-padding;
+}
+
 h1 {
   font-size: 2rem;
   margin: 0;
@@ -56,17 +66,6 @@ button {
   cursor: pointer;
   background-color: transparent;
   width: 100%;
-}
-
-.container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-section {
-  padding: $main-padding;
 }
 
 :focus {

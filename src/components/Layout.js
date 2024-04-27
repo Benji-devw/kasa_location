@@ -3,7 +3,6 @@ import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Header from "./header/header";
 import Footer from "./footer/footer";
 
-//TODO: add head
 const Layout = ({ children, page }) => {
   return (
     <HelmetProvider>
