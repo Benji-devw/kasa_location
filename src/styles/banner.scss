@@ -1,6 +1,6 @@
 .banner {
   position: relative;
-  text-align: center;
+  // text-align: center;
   height: 223px;
   border-radius: 25px;
   color: #fff;
@@ -29,11 +29,16 @@
     position: relative;
     z-index: 5;
     height: 100%;
+    margin: 1rem;
   }
 }
 
 @media (max-width: 768px) {
   .banner {
-    height: 150px;
+    justify-content: flex-start;
+    height: 110px;
+    &__title {
+      width: 200px;
+    }
   }
 }
