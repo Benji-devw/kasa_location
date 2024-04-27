@@ -21,19 +21,36 @@ const Carrousels = ({ title, pictures }) => {
       );
     }, 300);
   };
-
+  console.log(pictures.length);
   return (
     <div className="article__carrousel">
-      <span
-        tabIndex={0}
-        className="article__carrousel__arrow prev"
-        onClick={prevImage}
-        onKeyDown={(event) => {
-          event.key === "Enter" && prevImage();
-        }}
-      >
-        &#10094;
-      </span>
+      {pictures.length === 1 ? (
+        ""
+      ) : (
+        <>
+          <span
+            tabIndex={0}
+            className="article__carrousel__arrow prev"
+            onClick={prevImage}
+            onKeyDown={(event) => {
+              event.key === "Enter" && prevImage();
+            }}
+          >
+            &#10094;
+          </span>
+          <span
+            tabIndex={0}
+            className="article__carrousel__arrow next"
+            onClick={nextImage}
+            onKeyDown={(event) => {
+              event.key === "Enter" && nextImage();
+            }}
+          >
+            &#10095;
+          </span>
+        </>
+      )}
+
       <img
         className={index === currentImage ? "visible" : "hidden"}
         src={pictures[currentImage]}
@@ -41,16 +58,6 @@ const Carrousels = ({ title, pictures }) => {
       />
       <span className="article__carrousel__counter">
         {index + 1}/{pictures.length}
-      </span>
-      <span
-        tabIndex={0}
-        className="article__carrousel__arrow next"
-        onClick={nextImage}
-        onKeyDown={(event) => {
-          event.key === "Enter" && nextImage();
-        }}
-      >
-        &#10095;
       </span>
     </div>
   );
